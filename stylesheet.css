@@ -1,0 +1,99 @@
+* {
+    font-family: "Windows";
+}
+
+.mainbody {
+    margin: 1.5% 1% 1% 1%;
+    border: solid 2px black;
+    box-shadow: 3px 4px #444444, 5px 6px black;
+    background-color: lightgray;
+}
+
+::webkit-scrollbar {
+    width: 30px;
+}
+
+/* (A) FIXED WRAPPER */
+.hwrap {
+    overflow: hidden; /* HIDE SCROLL BAR */
+    background: #000;
+  }
+   
+/* (B) MOVING TICKER WRAPPER */
+.hmove { 
+    display: flex;
+}
+  
+/* (C) ITEMS - INTO A LONG HORIZONTAL ROW */
+.hitem {
+    flex-shrink: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    white-space: nowrap;
+    font-family: "Windows";
+    color: white;
+    letter-spacing: 1px;
+}
+   
+/* (D) ANIMATION - MOVE ITEMS FROM RIGHT TO LEFT */
+/* 4 ITEMS -400%, CHANGE THIS IF YOU ADD/REMOVE ITEMS */
+@keyframes tickerh {
+    0% { transform: translate3d(0%, 0, 0); }
+    100% { transform: translate3d(-100%, 0, 0); }
+}
+
+.hmove { animation: tickerh linear 30s infinite; }
+
+.browser-layout {
+    border-bottom: 2px solid black;
+    background: linear-gradient(to right, #3333ff 0%, #9933ff 69%);
+}
+
+.header-grid {
+    padding: 3px;
+    padding-left: 6px;
+}
+
+.favicon-div {
+    font-size: 1.5em;
+    font-family: "Windows";
+    color: rgba(255, 255, 255, 0.9);
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.nav-bar button {
+    margin: 3px;
+    margin-right: 12px;
+    border: none;
+    background-color: lightgray;
+    font-size: 1.5em;
+    padding: 8px;
+}
+
+.nav-bar button.visiting {
+    background-color: #3333ff;
+    color: white;
+}
+
+button:hover {
+    background-color: #3333ff;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-bar {
+    border-bottom: 2px solid black;
+    box-shadow: 0px 2px white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+}
